@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleApp", "SimpleApp\SimpleApp.csproj", "{087B1155-1181-4444-9691-60A0B8D30EE6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repository", "Repository", "{BEEF3E56-3869-4AD5-9D5D-F3FE654690D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleApp.Repository", "SimpleApp.Repository\SimpleApp.Repository.csproj", "{25EDF349-E78C-48C5-90A3-7EA40F29F56A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleApp.API", "SimpleApp.API\SimpleApp.API.csproj", "{A67833C5-9BAE-4EFE-B532-AB4A664EFE1D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{087B1155-1181-4444-9691-60A0B8D30EE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{087B1155-1181-4444-9691-60A0B8D30EE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{087B1155-1181-4444-9691-60A0B8D30EE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{087B1155-1181-4444-9691-60A0B8D30EE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25EDF349-E78C-48C5-90A3-7EA40F29F56A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25EDF349-E78C-48C5-90A3-7EA40F29F56A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25EDF349-E78C-48C5-90A3-7EA40F29F56A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25EDF349-E78C-48C5-90A3-7EA40F29F56A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A67833C5-9BAE-4EFE-B532-AB4A664EFE1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A67833C5-9BAE-4EFE-B532-AB4A664EFE1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A67833C5-9BAE-4EFE-B532-AB4A664EFE1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A67833C5-9BAE-4EFE-B532-AB4A664EFE1D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{25EDF349-E78C-48C5-90A3-7EA40F29F56A} = {BEEF3E56-3869-4AD5-9D5D-F3FE654690D7}
+	EndGlobalSection
+EndGlobal

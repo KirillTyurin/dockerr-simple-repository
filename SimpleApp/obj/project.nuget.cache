@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "0XFJn9KwYN2pzr1iuM81nThERkBLe9+h5Gyxz7BHkJDvtpfMnOMUXSP4HAM7MPmptv0cA1Y7+XRjOyswsJzPFw==",
+  "success": true,
+  "projectFilePath": "C:\\Study\\Docker\\SimpleApp\\SimpleApp\\SimpleApp.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://teamcity.elrw.com/httpAuth/app/nuget/v1/FeedService.svc/'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
+}
