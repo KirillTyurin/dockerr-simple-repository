@@ -13,6 +13,18 @@ using Microsoft.Extensions.Logging.Console;
 
 class Program
 {
+
+    public class TextModel
+    {
+        public string Url { get; set; }
+        
+        public string DraftFilePath { get; set; }
+        
+        public string ArticlePath { get; set; }
+        
+        public string ShortDesciption { get; set; }
+    }
+    
     static async Task Main(string[] args)
     {
         // Use ConfigurationBuilder to read the appsettings.json file
@@ -74,9 +86,31 @@ class Program
                                 
                                 htmlDocument.LoadHtml(str);
                             }
-                            
-                            var contentNode = htmlDocument.DocumentNode.SelectSingleNode("//*[@class='mw-parser-output']")
-                            
+
+                            var contentNode =
+                                htmlDocument.DocumentNode.SelectSingleNode("//*[@class='mw-parser-output']");
+
+                            string shortDescription;
+
+                            foreach (var child in contentNode.ChildNodes)
+                            {
+                                if (child.HasClass("shortdescription"))
+                                {
+                                    shortDescription = child.InnerText;
+                                }
+
+                                if (child.Name == "p")
+                                {
+                                    
+                                }
+
+                                if (child.Name == "h2")
+                                {
+                                    
+                                }
+                                Console.WriteLine(child.InnerText);
+                            }
+
                         })
                         );
                 }
