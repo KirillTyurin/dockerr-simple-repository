@@ -1,0 +1,35 @@
+version: '3.4'
+services:
+  simpleapp:
+    container_name: simpleapp_console
+    build:
+        context: .
+        dockerfile: ./SimpleApp/Dockerfile
+    ports:
+        - "5097:5097"
+    networks:
+        isolated_network:
+            #ipv4_address: 127.0.0.1
+    depends_on:
+      - mongo_dc
+      - simpleapi
+
+  simpleapi:
+    container_name: simpleapp_api
+    build:
+        context: .
+        dockerfile: ./SimpleApp.API/Dockerfile
+    ports:
+      - "5277:80"
+    networks:
+        isolated_network:
+            #ipv4_address: 127.0.0.1
+
+  mongo_dc:
+    image: mongo
+    ports:
+      - "27018:27017"
+networks:
+    isolated_network:
+        driver: bridge
+          
