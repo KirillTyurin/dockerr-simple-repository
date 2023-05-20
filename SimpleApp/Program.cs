@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 using HtmlAgilityPack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using MongoDB.Bson;
 using MongoDB.Driver;
 
 class Program
@@ -79,7 +78,20 @@ class Program
                 
                 var connectionStringToDatabase = "mongodb://mongo_dc:27017/";
                 var mongoClient = new MongoClient(connectionStringToDatabase);
+
                 var database = mongoClient.GetDatabase("articles_new");
+
+                var collections = await database.ListCollectionNames().ToListAsync();
+
+                Console.WriteLine($"Collections name: {string.Join(", ", collections)}");
+                
+                if (collections.All(x => x != "articleinfo"))
+                {
+                    Console.WriteLine("Need create collection");
+                    database.CreateCollection("articleinfo");
+                    Console.WriteLine("collection was created.");
+                }
+                
                 var collection = database.GetCollection<TextModel>("articleinfo");
                 
                 for (int i = 0; i < arr.Length; i++)

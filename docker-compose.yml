@@ -16,11 +16,13 @@ services:
 
   simpleapi:
     container_name: simpleapp_api
+    environment:
+      ASPNETCORE_URLS: http://*:5277
     build:
         context: .
         dockerfile: ./SimpleApp.API/Dockerfile
     ports:
-      - "5277:80"
+      - "5277:5277"
     networks:
         isolated_network:
             #ipv4_address: 127.0.0.1
@@ -29,6 +31,8 @@ services:
     image: mongo
     ports:
       - "27018:27017"
+    networks:
+      isolated_network:
 networks:
     isolated_network:
         driver: bridge
